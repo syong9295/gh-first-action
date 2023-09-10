@@ -1,0 +1,19 @@
+# workflow name
+name: First Workflow
+
+# trigger 'on'
+# 'workflow_dispatch' is an event that makes you able to manually trigger this workflow
+on: workflow_dispatch
+
+jobs:
+  # job name
+  first-job:
+    # runs-on is reserved keyword just like 'name', 'on' and 'jobs' etc.
+    # this specifies the environment to use, see more on https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners
+    runs-on: ubuntu-latest
+    steps:
+      # step name
+      - name: Print greeting
+        run: echo "Hello World!"
+      - name: Print goodbye
+        run: echo "Done - bye!"
